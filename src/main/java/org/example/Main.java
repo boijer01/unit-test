@@ -6,9 +6,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
 
+    public static void main(String[] args) {
         String fileName = "src/main/java/org/example/profiles.txt";
 
         ArrayList<String> profiles = readProfilesFromFile(fileName);
@@ -25,16 +24,15 @@ public class Main {
                 profiles.add(line);
             }
         } catch (IOException e) {
-            System.out.println("Error reading profiles from file: " + fileName);
+            System.out.println("Error :( reading profiles from file: " + fileName);
         }
-
         return profiles;
     }
 
     public static void printProfiles(ArrayList<String> profiles) {
-        String[] raderArray = profiles.toArray(new String[0]);
+        String[] linesArray = profiles.toArray(new String[0]);
 
-        for (String rad : raderArray) {
+        for (String rad : linesArray) {
             System.out.println(rad);
         }
     }
